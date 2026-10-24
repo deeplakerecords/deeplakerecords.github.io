@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Deep Lake Records – Playlists</title>
+<meta name="description" content="Hand-picked Spotify playlists by Deep Lake Records. New tracks every Friday.">
+<meta name="theme-color" content="#04131a">
+<!-- Deep Lake Records – Linkseite für den Bio-Link (Phil 24.10.2026). Ein Klick pro Playlist, kein Tracking, keine
+     Fremd-Skripte. Neue Playlist: einfach eine weitere <a class="karte"> kopieren. -->
+<style>
+  :root {
+    --grund: #04131a; --karte: rgba(255,255,255,.06); --rand: rgba(255,255,255,.12);
+    --text: #f2f7f8; --leise: rgba(242,247,248,.62); --tuerkis: #6fe3d6; --magenta: #ff4fb8; --sonne: #ffb85c;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    min-height: 100vh; color: var(--text); background: var(--grund);
+    background-image: radial-gradient(120% 70% at 50% 0%, #0e3f4a 0%, rgba(4,19,26,0) 60%),
+                      radial-gradient(80% 40% at 50% 100%, #072a33 0%, rgba(4,19,26,0) 70%);
+    font: 16px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    display: flex; justify-content: center; padding: 48px 16px calc(40px + env(safe-area-inset-bottom));
+  }
+  main { width: 100%; max-width: 460px; }
+  header { text-align: center; margin-bottom: 30px; }
+  .marke { font-size: 13px; letter-spacing: .45em; font-weight: 600; color: var(--leise); }
+  h1 { font-size: 28px; line-height: 1.2; margin: 14px 0 8px; font-weight: 800; }
+  .unter { color: var(--leise); font-size: 15px; }
+  .welle { display: block; margin: 0 auto 14px; }
+  .karte {
+    display: flex; align-items: center; gap: 16px; padding: 14px; margin-bottom: 14px;
+    background: var(--karte); border: 1px solid var(--rand); border-radius: 18px;
+    color: inherit; text-decoration: none; transition: transform .15s ease, border-color .15s ease, background .15s ease;
+  }
+  .karte:hover, .karte:focus-visible { transform: translateY(-2px); background: rgba(255,255,255,.09); border-color: var(--akzent); outline: none; }
+  .karte img { width: 76px; height: 76px; border-radius: 10px; flex: none; object-fit: cover; }
+  .info { flex: 1; min-width: 0; }
+  .name { font-weight: 800; font-size: 16px; letter-spacing: .02em; line-height: 1.25; }
+  .art { color: var(--leise); font-size: 14px; }
+  .knopf {
+    flex: none; font-weight: 700; font-size: 14px; padding: 9px 16px; border-radius: 999px;
+    background: var(--akzent); color: #061317; white-space: nowrap;
+  }
+  footer { text-align: center; color: var(--leise); font-size: 13px; margin-top: 26px; }
+  @media (max-width: 360px) { .knopf { display: none; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <svg class="welle" width="44" height="22" viewBox="0 0 44 22" fill="none" aria-hidden="true">
+      <path d="M2 14c5 0 5-6 10-6s5 6 10 6 5-6 10-6 5 6 10 6" stroke="#6fe3d6" stroke-width="2.4" stroke-linecap="round"/>
+    </svg>
+    <div class="marke">DEEP LAKE RECORDS</div>
+    <h1>Save the playlist.<br>New tracks every Friday.</h1>
+    <p class="unter">Hand-picked electronic music on Spotify.</p>
+  </header>
+
+  <a class="karte" aria-label="BEST MELODIC TECHNO on Spotify" style="--akzent: var(--tuerkis)" href="https://open.spotify.com/playlist/2PZ9C1YSgcyeP6cq4uD18e">
+    <img src="bilder/melodic.jpg" alt="" width="76" height="76">
+    <div class="info"><div class="name">BEST MELODIC TECHNO</div><div class="art">Night drives · focus · afterhours</div></div>
+    <span class="knopf" aria-hidden="true">Open</span>
+  </a>
+
+  <a class="karte" aria-label="BEST TECHNO on Spotify" style="--akzent: var(--magenta)" href="https://open.spotify.com/playlist/2DSOzMwRokwDulGRfrj866">
+    <img src="bilder/techno.jpg" alt="" width="76" height="76">
+    <div class="info"><div class="name">BEST TECHNO</div><div class="art">Warehouse · gym · peak time</div></div>
+    <span class="knopf" aria-hidden="true">Open</span>
+  </a>
+
+  <a class="karte" aria-label="BEST HOUSE MUSIC on Spotify" style="--akzent: var(--sonne)" href="https://open.spotify.com/playlist/1q1buQr4Ld2rhWWuX1hhCc">
+    <img src="bilder/house.jpg" alt="" width="76" height="76">
+    <div class="info"><div class="name">BEST HOUSE MUSIC</div><div class="art">Pregame · rooftop · summer</div></div>
+    <span class="knopf" aria-hidden="true">Open</span>
+  </a>
+
+  <footer>Deep Lake Records</footer>
+</main>
+</body>
+</html>
