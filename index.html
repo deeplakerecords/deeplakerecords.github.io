@@ -6,8 +6,8 @@
 <title>Deep Lake Records - Playlists</title>
 <meta name="description" content="Hand-picked Spotify playlists by Deep Lake Records. New tracks every Friday.">
 <meta name="theme-color" content="#04131a">
-<!-- Deep Lake Records - Linkseite für den Bio-Link (Phil 24.10.2026). Ein Klick pro Playlist, kein Tracking, keine
-     Fremd-Skripte. Neue Playlist: einfach eine weitere <a class="karte"> kopieren. -->
+<!-- Deep Lake Records - Linkseite für den Bio-Link (Phil 24.10.2026). Ein Klick pro Playlist. Zählt anonym und ohne Cookies mit GoatCounter
+     (Aufrufe, Herkunft ?ref=ig/tt/fb/yt, Klicks je Playlist), keine einzelnen Personen. Neue Playlist: einfach eine weitere <a class="karte"> kopieren. -->
 <style>
   :root {
     --grund: #04131a; --karte: rgba(255,255,255,.06); --rand: rgba(255,255,255,.12);
@@ -57,25 +57,25 @@
     <p class="unter">Hand-picked electronic music on Spotify.</p>
   </header>
 
-  <a class="karte" aria-label="BEST MELODIC TECHNO on Spotify" style="--akzent: var(--tuerkis)" href="https://open.spotify.com/playlist/2PZ9C1YSgcyeP6cq4uD18e">
+  <a class="karte" aria-label="BEST MELODIC TECHNO on Spotify" style="--akzent: var(--tuerkis)" data-goatcounter-click="spotify-melodic" data-goatcounter-title="Spotify: melodic" href="https://open.spotify.com/playlist/2PZ9C1YSgcyeP6cq4uD18e">
     <img src="bilder/melodic.jpg" alt="" width="76" height="76">
     <div class="info"><div class="name">BEST MELODIC TECHNO</div><div class="art">Night drives · focus · afterhours</div></div>
     <span class="knopf" aria-hidden="true">Open</span>
   </a>
 
-  <a class="karte" aria-label="BEST TECHNO on Spotify" style="--akzent: var(--magenta)" href="https://open.spotify.com/playlist/2DSOzMwRokwDulGRfrj866">
+  <a class="karte" aria-label="BEST TECHNO on Spotify" style="--akzent: var(--magenta)" data-goatcounter-click="spotify-techno" data-goatcounter-title="Spotify: techno" href="https://open.spotify.com/playlist/2DSOzMwRokwDulGRfrj866">
     <img src="bilder/techno.jpg" alt="" width="76" height="76">
     <div class="info"><div class="name">BEST TECHNO</div><div class="art">Warehouse · gym · peak time</div></div>
     <span class="knopf" aria-hidden="true">Open</span>
   </a>
 
-  <a class="karte" aria-label="BEST HOUSE MUSIC on Spotify" style="--akzent: var(--sonne)" href="https://open.spotify.com/playlist/1q1buQr4Ld2rhWWuX1hhCc">
+  <a class="karte" aria-label="BEST HOUSE MUSIC on Spotify" style="--akzent: var(--sonne)" data-goatcounter-click="spotify-house" data-goatcounter-title="Spotify: house" href="https://open.spotify.com/playlist/1q1buQr4Ld2rhWWuX1hhCc">
     <img src="bilder/house.jpg" alt="" width="76" height="76">
     <div class="info"><div class="name">BEST HOUSE MUSIC</div><div class="art">Pregame · rooftop · summer</div></div>
     <span class="knopf" aria-hidden="true">Open</span>
   </a>
 
-  <a class="karte" aria-label="BEST MINIMAL TECHNO 2026 on Spotify" style="--akzent: var(--violett)" href="https://open.spotify.com/playlist/3cRH6k8yTijTJLsAZRehXQ">
+  <a class="karte" aria-label="BEST MINIMAL TECHNO 2026 on Spotify" style="--akzent: var(--violett)" data-goatcounter-click="spotify-minimal" data-goatcounter-title="Spotify: minimal" href="https://open.spotify.com/playlist/3cRH6k8yTijTJLsAZRehXQ">
     <img src="bilder/minimal.jpg" alt="" width="76" height="76">
     <div class="info"><div class="name">BEST MINIMAL TECHNO 2026</div><div class="art">Deep · hypnotic · late night</div></div>
     <span class="knopf" aria-hidden="true">Open</span>
@@ -83,5 +83,11 @@
 
   <footer>Deep Lake Records</footer>
 </main>
+<script>
+  // Herkunft (?ref=ig) auch an die Knopf-Klicks hängen, damit wir sehen: welche Plattform → welche Playlist
+  var herkunft = new URLSearchParams(location.search).get('ref');
+  if (herkunft) document.querySelectorAll('a.karte').forEach(function (a) { a.dataset.goatcounterReferrer = herkunft; });
+</script>
+<script data-goatcounter="https://deeplakerecords.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
